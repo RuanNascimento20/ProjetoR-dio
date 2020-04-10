@@ -1,0 +1,2 @@
+# ProjetoRadio
+O desenvolvimento web requerido pela matéria de Multimídias do curso de Bacharelado em Tecnologia da Informação da UFERSA campus Pau dos Ferros, e demonstrar as características técnicas do site e as manipulações de áudio envolvidas. O site com a temática de Rádio Web foi desenvolvido usando HTML5, CSS e Javascript com o uso da IDE Visual Studio, ao qual utilizou como reprodutor de mídia o browser FireFox,
