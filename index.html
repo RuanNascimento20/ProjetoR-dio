@@ -1,0 +1,128 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./estilo.css">
+  <title>BradleyMusic</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">BradleyMusic</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+    <canvas id="canvas1" width="1310px" height="80px"> 
+    </canvas>
+  <br>
+    <canvas id="canvas2" width="1310px" height="80px"> 
+    </canvas>
+   <br>
+<br>
+
+  <div class="componentes_controle">
+    <div class="componente_volume">
+      <label class="nome_volume">Volume</label>
+      <input  class="volume" id="volume" type="range" min="0.0" value="1.0" max="1.0"step="0.1"> 
+    </div>
+    
+    <div class="componente_balanco">
+        <label class="nome_balanco">Balanço</label>
+        <input class="balanco"  id="balanco" type="range" min="-1" max="1"step="0.01">
+      </div>
+  </div>
+  <div>
+    <audio loop controls crossorigin="anonymous" id="audio" autoplay>
+    </audio>
+  </div>
+  <div class="col-lg-12" style="margin-top:1%">
+    <div class="panel playerdiv">
+      <table class="table table-condensed">
+        <thead>
+          <tr style="color:#66ff33;border-top:0px;">
+            <td style="border-top:0px;" colspan="3">
+              <div class="col-lg-6">
+                <div class="col-lg-6"><img class="img-repsonsive pull-right" style="width: 80px;"
+                    src="https://ichef.bbci.co.uk/images/ic/256x256/p0431lgw.jpg" /></div>
+                <p class="titulo-autor" style="font-size: 40px;">Charles Bradley</p>
+              </div>
+            </td>
+          </tr>
+          <tr style="color:rgb(218, 255, 6)">
+            <th>
+              <li>Musicas</li>
+            </th>
+            <th>
+              <li>Cantor</li>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="fonte-musicas">
+          <tr>
+            <td>
+              <button type="button" class="btn btn-dark" onclick="tocar('SRC/charles-bradley-changes-official-video.mp3')">Play</button>
+              Changes</td>
+            <td>Charles Bradley
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="btn btn-dark" onclick="tocar('SRC/charles-bradley-strictly-reserved-for-you.mp3')">Play</button>
+              Strictly Reserved For You</td>
+            <td>Charles Bradley
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="btn btn-dark" onclick="tocar('SRC/the-world-is-going-up-in-flames.mp3')">Play</button>
+              The world is going up in flames</td>
+            <td>Charles Bradley
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="btn btn-dark" onclick="tocar('SRC/this-love-aint-big-enough-live-in-paris-07-2011.mp3')">Play</button>
+              This love aint big enough live in paris</td>
+            <td>Charles Bradley
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="btn btn-dark" onclick="tocar('SRC/why-is-it-so-hard-live-on-kexp.mp3')">Play</button>
+              Why is it so hard live on kexp</td>
+            <td>Charles Bradley</td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./JS/audiocontroller.js"></script>
+
+<script src="./JS/animationtime.js"></script>
+
+<script src="./JS/animationfrequence.js"></script>
+ 
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
